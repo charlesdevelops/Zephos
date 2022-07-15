@@ -8,31 +8,56 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var tomorrowView = false
+    
+    @State private var AboutView = false
+    @StateObject var locationManager = LocationManager()
+    var weatherManager = WeatherManager()
+    @State var weather: Response?
+    
     var body: some View {
         VStack{
             
-            Image(systemName: "wind")
-            Text("Welcome to Zephos")
-                .padding()
-            TodayView().padding()
-            
-            Button(action: {
-                tomorrowView.toggle()
-            }) {
-                HStack{
-                    Text("Tomorrows forecast")
+            if let location = locationManager.location {
+                if let weather = weather {
+                    TodayView(weather: weather)
+                }
+                else{
+                    LoadingView()
+                        .task {
+                            do {
+                                weather = try await weatherManager.getCurrentWeather(latitude: location.latitude, longitude: location.longitude)
+                            } catch{
+                               print("Error getting weather: \(error)")
+                            }
+                        }
+                }
+            } else {
+                if locationManager.isLoading {
+                    LoadingView()
+                } else{
+                WelcomeView()
+                    .environmentObject(locationManager)
                 }
             }
+            
+//            Button(action: {
+//                AboutView.toggle()
+//            }) {
+//                HStack{
+//                    Text("About")
+//                }
+//            }
         }
-        .popover(isPresented: $tomorrowView) {
-            TomorrowView()
-        }
+//        .popover(isPresented: $AboutView) {
+//            Zephos.AboutView()
+//        }
+        .preferredColorScheme(.dark)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }

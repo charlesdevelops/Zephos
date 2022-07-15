@@ -1,19 +1,33 @@
 //
-//  WeatherData.swift
+//  WeatherManager.swift
 //  Zephos
 //
 //  Created by Charles Watson on 14/7/2022.
 //
+// response structure generated at quicktype.io
 
 import Foundation
+import CoreLocation
 
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let weatherData = try? newJSONDecoder().decode(WeatherData.self, from: jsonData)
+class WeatherManager {
+    func getCurrentWeather(latitude:CLLocationDegrees, longitude:CLLocationDegrees) async throws -> Response {
+        guard let url = URL(string:"https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=APIKEY&units=metric") else{fatalError("Missing url")
+        }
+        
+        let urlRequest = URLRequest(url: url)
+        
+        let (data, response) = try await URLSession.shared.data(for: urlRequest)
+        
+        guard (response as? HTTPURLResponse)?.statusCode == 200 else {fatalError("Error fetching data")}
+        
+        let decodedData = try JSONDecoder().decode(Response.self, from: data)
+        return decodedData
+    }
+}
 
-// MARK: - WeatherData
-struct WeatherData: Codable {
+
+// MARK: - Response
+struct Response: Codable {
     let coord: Coord
     let weather: [Weather]
     let base: String
@@ -78,24 +92,4 @@ struct Wind: Codable {
     let speed: Double
     let deg: Int
     let gust: Double
-}
-
-// MARK: - Api
-class Api: ObservableObject {
-    @Published var main = [Weather]()
-
-    func getData(completion:@escaping ([Weather]) -> ()){
-        guard let url = URL(string:"https://api.openweathermap.org/data/2.5/weather?lat=-31.549250&lon=115.624329&appid=APIKEYHERE&units=metric") else{
-            print("Invalid URL")
-            return
-        }
-        URLSession.shared.dataTask(with: url) { Data, _, _ in
-//            let main = try! JSONDecoder().decode([Weather].self, from: Data!)
-            let WeatherData = try? JSONDecoder().decode(WeatherData.self, from: Data!)
-            print(self.main)
-            DispatchQueue.main.async {
-                completion(self.main)
-            }
-        }.resume()
-    }
 }

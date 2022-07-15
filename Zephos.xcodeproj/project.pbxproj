@@ -7,24 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56177C4A288143250011EBDB /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56177C49288143250011EBDB /* AboutView.swift */; };
 		56F5E2B7287FC4E3001808C5 /* ZephosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5E2B6287FC4E3001808C5 /* ZephosApp.swift */; };
 		56F5E2B9287FC4E3001808C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5E2B8287FC4E3001808C5 /* ContentView.swift */; };
 		56F5E2BB287FC4E5001808C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56F5E2BA287FC4E5001808C5 /* Assets.xcassets */; };
 		56F5E2BE287FC4E5001808C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56F5E2BD287FC4E5001808C5 /* Preview Assets.xcassets */; };
-		56F5E2C5287FC567001808C5 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5E2C4287FC567001808C5 /* WeatherData.swift */; };
-		56F5E2C7287FECF1001808C5 /* TomorrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5E2C6287FECF1001808C5 /* TomorrowView.swift */; };
 		56F5E2C9287FEFF1001808C5 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5E2C8287FEFF1001808C5 /* TodayView.swift */; };
+		56F5E2CC287FF1FA001808C5 /* Shiny in Frameworks */ = {isa = PBXBuildFile; productRef = 56F5E2CB287FF1FA001808C5 /* Shiny */; };
+		56F5E2CF287FFA69001808C5 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5E2CE287FFA69001808C5 /* LocationManager.swift */; };
+		56F5E2D2287FFBC5001808C5 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5E2D1287FFBC5001808C5 /* WelcomeView.swift */; };
+		56F5E2D4288000CE001808C5 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5E2D3288000CE001808C5 /* LoadingView.swift */; };
+		56F5E2D62880022C001808C5 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5E2D52880022C001808C5 /* WeatherManager.swift */; };
+		56F5E2D82880077E001808C5 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5E2D72880077E001808C5 /* ModelData.swift */; };
+		56F5E2DA288007A3001808C5 /* weatherData.json in Resources */ = {isa = PBXBuildFile; fileRef = 56F5E2D9288007A3001808C5 /* weatherData.json */; };
+		56F5E2DC288008CC001808C5 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5E2DB288008CC001808C5 /* extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56177C49288143250011EBDB /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		56F5E2B3287FC4E3001808C5 /* Zephos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zephos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56F5E2B6287FC4E3001808C5 /* ZephosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZephosApp.swift; sourceTree = "<group>"; };
 		56F5E2B8287FC4E3001808C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		56F5E2BA287FC4E5001808C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56F5E2BD287FC4E5001808C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		56F5E2C4287FC567001808C5 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
-		56F5E2C6287FECF1001808C5 /* TomorrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomorrowView.swift; sourceTree = "<group>"; };
 		56F5E2C8287FEFF1001808C5 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		56F5E2CE287FFA69001808C5 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		56F5E2D1287FFBC5001808C5 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		56F5E2D3288000CE001808C5 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		56F5E2D52880022C001808C5 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		56F5E2D72880077E001808C5 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		56F5E2D9288007A3001808C5 /* weatherData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = weatherData.json; sourceTree = "<group>"; };
+		56F5E2DB288008CC001808C5 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56F5E2CC287FF1FA001808C5 /* Shiny in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,11 +73,14 @@
 			children = (
 				56F5E2B6287FC4E3001808C5 /* ZephosApp.swift */,
 				56F5E2B8287FC4E3001808C5 /* ContentView.swift */,
+				56177C49288143250011EBDB /* AboutView.swift */,
 				56F5E2C8287FEFF1001808C5 /* TodayView.swift */,
-				56F5E2C6287FECF1001808C5 /* TomorrowView.swift */,
-				56F5E2C4287FC567001808C5 /* WeatherData.swift */,
+				56F5E2D1287FFBC5001808C5 /* WelcomeView.swift */,
+				56F5E2D3288000CE001808C5 /* LoadingView.swift */,
+				56F5E2CD287FFA58001808C5 /* Managers */,
 				56F5E2BA287FC4E5001808C5 /* Assets.xcassets */,
 				56F5E2BC287FC4E5001808C5 /* Preview Content */,
+				56F5E2DB288008CC001808C5 /* extensions.swift */,
 			);
 			path = Zephos;
 			sourceTree = "<group>";
@@ -72,8 +89,19 @@
 			isa = PBXGroup;
 			children = (
 				56F5E2BD287FC4E5001808C5 /* Preview Assets.xcassets */,
+				56F5E2D72880077E001808C5 /* ModelData.swift */,
+				56F5E2D9288007A3001808C5 /* weatherData.json */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		56F5E2CD287FFA58001808C5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				56F5E2CE287FFA69001808C5 /* LocationManager.swift */,
+				56F5E2D52880022C001808C5 /* WeatherManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,6 +120,9 @@
 			dependencies = (
 			);
 			name = Zephos;
+			packageProductDependencies = (
+				56F5E2CB287FF1FA001808C5 /* Shiny */,
+			);
 			productName = Zephos;
 			productReference = 56F5E2B3287FC4E3001808C5 /* Zephos.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +151,9 @@
 				Base,
 			);
 			mainGroup = 56F5E2AA287FC4E3001808C5;
+			packageReferences = (
+				56F5E2CA287FF1FA001808C5 /* XCRemoteSwiftPackageReference "shiny" */,
+			);
 			productRefGroup = 56F5E2B4287FC4E3001808C5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -135,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56F5E2BE287FC4E5001808C5 /* Preview Assets.xcassets in Resources */,
+				56F5E2DA288007A3001808C5 /* weatherData.json in Resources */,
 				56F5E2BB287FC4E5001808C5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,10 +182,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				56F5E2B9287FC4E3001808C5 /* ContentView.swift in Sources */,
-				56F5E2C7287FECF1001808C5 /* TomorrowView.swift in Sources */,
-				56F5E2C5287FC567001808C5 /* WeatherData.swift in Sources */,
+				56F5E2CF287FFA69001808C5 /* LocationManager.swift in Sources */,
+				56F5E2DC288008CC001808C5 /* extensions.swift in Sources */,
 				56F5E2C9287FEFF1001808C5 /* TodayView.swift in Sources */,
+				56177C4A288143250011EBDB /* AboutView.swift in Sources */,
+				56F5E2D4288000CE001808C5 /* LoadingView.swift in Sources */,
+				56F5E2D62880022C001808C5 /* WeatherManager.swift in Sources */,
+				56F5E2D82880077E001808C5 /* ModelData.swift in Sources */,
 				56F5E2B7287FC4E3001808C5 /* ZephosApp.swift in Sources */,
+				56F5E2D2287FFBC5001808C5 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +393,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		56F5E2CA287FF1FA001808C5 /* XCRemoteSwiftPackageReference "shiny" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maustinstar/shiny";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		56F5E2CB287FF1FA001808C5 /* Shiny */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56F5E2CA287FF1FA001808C5 /* XCRemoteSwiftPackageReference "shiny" */;
+			productName = Shiny;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 56F5E2AB287FC4E3001808C5 /* Project object */;
 }
